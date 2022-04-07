@@ -1,12 +1,12 @@
 <template>
   <div class="intro container">
-    <h1 class="intro__title">The Design Thinking superpowers</h1>
+    <h2 class="intro__title">The Design Thinking superpowers</h2>
     <p class="intro__description">Tools, tutorials, design and innovation experts, all in one place! The most intuitive
       way to imagine your next user experience.</p>
     <div class="intro__options">
       <a href="#" class="btn btn--bright">Get started</a>
       <a href="#" class="intro__video-link">
-        <img src="../assets/img/icon-play.svg" alt="иконка play">
+        <img src="../assets/img/icon-play.svg" alt="icon play">
         <span>Watch the Video</span>
       </a>
     </div>
@@ -24,6 +24,8 @@ export default {
 
 .intro {
   padding: 116px 0 108px 25px;
+  margin-top: 33px;
+  margin-bottom: 115px;
   background-image: url("../assets/img/intro.svg");
   background-repeat: no-repeat;
   background-position: 100% 0;
