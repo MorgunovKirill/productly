@@ -1,5 +1,8 @@
 <template>
-  <div class="feature">
+  <div
+  class="feature"
+  :class="{'feature--alt': options.alt}"
+  >
     <div class="container">
       <div class="feature__info">
         <p class="feature__advantage">{{ options.advantage }}</p>
@@ -7,7 +10,7 @@
         <p class="feature__description">{{ options.description }}</p>
         <ul class="feature__list" v-if="options.list">
           <li class="feature__item" v-for="(item, index) in options.list" :key="index">
-            <h3 class="feature__heading">{{ item.heading }}</h3>
+            <h3 v-if="!options.alt" class="feature__heading">{{ item.heading }}</h3>
             <p class="feature__text">{{ item.text }}</p>
           </li>
         </ul>
@@ -23,9 +26,6 @@
 export default {
   name: 'FeatureComponent',
   props: ['options'],
-  mounted() {
-    console.log(this.options)
-  }
 }
 </script>
 
@@ -35,6 +35,38 @@ export default {
 .feature {
   padding: 0;
   margin-bottom: 100px;
+
+  &--alt {
+    padding-bottom: 50px;
+    margin-bottom: 115px;
+
+    .feature__img {
+      left: 0;
+      right: initial;
+    }
+
+    .feature__info {
+      margin-right: 0;
+      margin-left: auto;
+    }
+
+    .feature__item {
+      padding-left: 65px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-image: url("../assets/img/icon-checkmark.svg");
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
 
   .container {
     position: relative;

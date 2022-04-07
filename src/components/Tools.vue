@@ -1,5 +1,5 @@
 <template>
-  <div class="tools">
+  <section class="tools">
     <div class="container">
       <h2 class="tools__title">We design tools to unveil your superpowers</h2>
       <ul class="tools__list">
@@ -26,7 +26,7 @@
       </ul>
       <a href="#" class="tools__btn btn btn--bright">Sign up now</a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

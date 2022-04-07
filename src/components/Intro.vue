@@ -1,5 +1,5 @@
 <template>
-  <div class="intro container">
+  <section class="intro container">
     <h2 class="intro__title">The Design Thinking superpowers</h2>
     <p class="intro__description">Tools, tutorials, design and innovation experts, all in one place! The most intuitive
       way to imagine your next user experience.</p>
@@ -10,7 +10,7 @@
         <span>Watch the Video</span>
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
