@@ -1,5 +1,6 @@
 @import "vars";
 @import "fonts";
+@import "btn";
 
 *,
 body,
@@ -63,6 +64,6 @@ select::-ms-expand {
 }
 
 .container {
-  max-width: 1115px;
+  max-width: 1160px;
   margin: 0 auto;
 }

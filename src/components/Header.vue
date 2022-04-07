@@ -24,7 +24,7 @@
       </nav>
       <nav class="user-nav">
         <a href="#" class="btn user-nav__btn">Sign In</a>
-        <a href="#" class="btn user-nav__btn user-nav__btn--logout">Sign Up</a>
+        <a href="#" class="btn btn--bright user-nav__btn user-nav__btn--logout">Sign Up</a>
       </nav>
   </header>
 </template>
@@ -34,13 +34,13 @@ export default {
   name: 'HeaderComponent',
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   @import "../assets/sass/vars";
 
   .header {
     display: flex;
     align-items: center;
-    padding: 24px 0 26px 0;
+    padding: 24px 40px 26px 0;
 
     &__logo {
       margin-right: auto;
@@ -84,7 +84,7 @@ export default {
 
     &__link {
       text-decoration: none;
-      color: $baseDarkColor;
+      color: $color-dark-base;
     }
   }
 
@@ -94,20 +94,11 @@ export default {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    border-radius: 4px;
 
     &__btn {
-      text-decoration: none;
-      color: $altDarkColor;
-      padding: 11px 25px;
-      border-radius: 4px;
-      border: 1px solid #bcd0e5;
       margin-right: 14px;
 
       &--logout {
-        border: none;
-        color: $color-default-white;
-        background: $colorBright;
         margin-right: 0;
       }
     }
