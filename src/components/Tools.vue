@@ -40,6 +40,7 @@ export default {
 
 .tools {
   padding: 0 0 90px 0;
+  margin-bottom: 140px;
   background-image: url("../assets/img/Bg.svg");
   background-position: 0 100%;
   background-size: contain;
