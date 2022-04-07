@@ -4,14 +4,16 @@
     <Intro />
     <Tools />
     <FeaturesList />
+    <Hero />
   </div>
 </template>
 
 <script>
-import HeaderComponent from "@/components/Header";
-import Intro from "@/components/Intro";
-import Tools from "@/components/Tools";
-import FeaturesList from './components/FeaturesList.vue';
+import HeaderComponent from "@/components/Header.vue";
+import Intro from "@/components/Intro.vue";
+import Tools from "@/components/Tools.vue";
+import FeaturesList from '@/components/FeaturesList.vue';
+import Hero from '@/components/Hero.vue';
 
 export default {
   name: 'App',
@@ -20,6 +22,7 @@ export default {
     Intro,
     HeaderComponent,
     FeaturesList,
+    Hero
   }
 }
 </script>
