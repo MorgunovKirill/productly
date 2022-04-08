@@ -22,6 +22,16 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-flow: column nowrap;
+
+  &.no-scroll {
+
+    @media (max-width: 870px) {
+      height: 100%;
+      overflow: hidden;
+      width: 100%;
+      z-index: 0;
+    }
+  }
 }
 
 main {
