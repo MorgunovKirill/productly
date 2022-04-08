@@ -64,6 +64,13 @@ select::-ms-expand {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1220px;
   margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

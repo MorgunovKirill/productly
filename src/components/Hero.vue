@@ -1,7 +1,9 @@
 <template>
   <section class="hero">
     <div class="container">
-      <Person v-for="author in authors" :key="author.id" :reply="author.reply" :img="author.img" />
+      <div class="hero__persons">
+        <Person v-for="author in authors" :key="author.id" :reply="author.reply" :img="author.img" />
+      </div>
       <div class="hero__main">
         <h2 class="hero__title">Need a super hero?</h2>
         <p class="hero__description">Do you require some help for your project: Conception workshop,
@@ -68,6 +70,22 @@ export default {
     background-size: 100%;
     padding: 230px 0 379px 0;
 
+  @media (max-width: 1070px) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+
+  @media (max-width: 600px) {
+    padding-bottom: 50px;
+  }
+
+  .container {
+    @media (max-width: 1070px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
     &__title {
         font-family: $primary-font;
         font-style: normal;
@@ -77,10 +95,26 @@ export default {
         margin: 0 0 20px 0;
     }
 
+    &__persons {
+      @media (max-width: 1070px) {
+        display: flex;
+        flex-wrap: wrap;
+        order: 1;
+      }
+
+      @media (max-width: 600px) {
+        display: block;
+      }
+    }
+
     &__main {
       margin: 0 auto;
       max-width: 542px;
       text-align: center;
+
+      @media (max-width: 1070px) {
+        margin-bottom: 70px;
+      }
     }
 
     &__description {

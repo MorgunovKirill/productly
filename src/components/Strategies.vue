@@ -74,6 +74,10 @@ export default {
 .strategies {
   padding-bottom: 137px;
 
+  @media (max-width: 1070px) {
+    padding-bottom: 75px;
+  }
+
   &__title {
     font-family: $primary-font;
     font-style: normal;
@@ -82,6 +86,10 @@ export default {
     line-height: 51px;
     color: $color-dark-base;
     margin: 0 0 9px 0;
+
+    @media (max-width: 1070px) {
+      text-align: center;
+    }
   }
 
   &__description {
@@ -92,6 +100,10 @@ export default {
     line-height: 26px;
     color: $color-dark-3;
     margin: 0 0 55px 0;
+
+    @media (max-width: 1070px) {
+      text-align: center;
+    }
   }
 
   &__list {
@@ -100,11 +112,20 @@ export default {
     list-style: none;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 1070px) {
+      display: block;
+    }
   }
 
   &__item {
     width: calc(33% - 32px);
     max-width: 348px;
+
+    @media (max-width: 1070px) {
+      width: auto;
+      margin: 0 auto 30px auto;
+    }
   }
 
   &__link {

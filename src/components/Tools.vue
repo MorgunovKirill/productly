@@ -46,6 +46,10 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
 
+  @media (max-width: 850px) {
+    margin-bottom: 55px;
+  }
+
   &__title {
     font-family: $primary-font;
     font-style: normal;
@@ -64,10 +68,31 @@ export default {
     list-style: none;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 850px) {
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 650px) {
+      display: block;
+    }
   }
 
   &__item {
     width: calc(25% - 46px);
+
+    @media (max-width: 850px) {
+      width: calc(50% - 46px);
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 650px) {
+      max-width: 280px;
+      width: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     img {
       margin-bottom: 30px;

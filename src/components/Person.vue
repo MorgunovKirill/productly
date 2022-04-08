@@ -20,6 +20,25 @@ export default {
 .person {
   position: absolute;
 
+  @media (max-width: 1070px) {
+    position: static;
+    width: calc(33% - 20px);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 960px) {
+    width: calc(50% - 20px);
+  }
+
+  @media (max-width: 600px) {
+    width: auto;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &:nth-child(1) {
     top: 116px;
     right: 15%;
@@ -51,13 +70,24 @@ export default {
     }
 
     .person__reply {
+
       &:before {
         right:  initial;
         left: 36px;
+
+        @media (max-width: 1070px) {
+          left: initial;
+          right: 30px;
+        }
       }
       &:after {
         right: initial;
         left: 30px;
+
+        @media (max-width: 1070px) {
+          left: initial;
+          right: 30px;
+        }
       }
     }
   }
@@ -77,6 +107,12 @@ export default {
     line-height: 24px;
     color: $color-dark-base;
     z-index: 1;
+    margin: 0;
+
+    @media (max-width: 960px) {
+      align-self: flex-end;
+    }
+
 
     &:before {
       content: "";
@@ -107,6 +143,11 @@ export default {
     right: -45px;
     width: 98px;
     height: 98px;
+
+    @media (max-width: 1070px) {
+      position: static;
+      align-self: flex-end;
+    }
   }
 }
 </style>

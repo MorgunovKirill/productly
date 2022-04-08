@@ -23,12 +23,27 @@ export default {
 @import "../assets/sass/vars";
 
 .intro {
-  padding: 116px 0 108px 25px;
+  padding-top: 116px;
+  padding-bottom:  108px;
+  padding-left: 55px;
   margin-top: 33px;
   margin-bottom: 115px;
   background-image: url("../assets/img/intro.svg");
   background-repeat: no-repeat;
   background-position: 100% 0;
+
+  @media (max-width: 1100px) {
+    padding-bottom: 500px;
+    background-position: 50% 100%;
+    margin-bottom: 75px;
+  }
+
+  @media (max-width: 650px) {
+    background: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
 
   &__title {
     font-family: $primary-font;
@@ -39,6 +54,10 @@ export default {
     max-width: 518px;
     margin: 0 0 30px 0;
     color: $color-dark-base;
+
+    @media (max-width: 650px) {
+     font-size: 36px;
+    }
   }
 
   &__description {
@@ -56,10 +75,20 @@ export default {
     display: flex;
     align-items: center;
 
+    @media (max-width: 650px) {
+      flex-direction: column;
+    }
+
     .btn {
       font-weight: 700;
       font-family: $primary-font;
       margin-right: 30px;
+
+      @media (max-width: 650px) {
+        font-size: 14px;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 

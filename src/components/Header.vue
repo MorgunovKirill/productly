@@ -40,7 +40,9 @@ export default {
   .header {
     display: flex;
     align-items: center;
-    padding: 24px 40px 26px 0;
+    padding-top: 24px;
+    padding-right: 40px;
+    padding-bottom: 26px;
 
     &__logo {
       margin-right: auto;

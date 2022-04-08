@@ -36,9 +36,19 @@ export default {
   padding: 0;
   margin-bottom: 100px;
 
+  @media (max-width: 1070px) {
+    margin-bottom: 85px;
+  }
+
   &--alt {
     padding-bottom: 50px;
     margin-bottom: 115px;
+
+    @media (max-width: 1070px) {
+      padding-bottom: 0;
+      margin-bottom: 85px;
+    }
+
 
     .feature__img {
       left: 0;
@@ -74,6 +84,10 @@ export default {
 
   &__info {
     max-width: 486px;
+
+    @media (max-width: 1070px) {
+      max-width: none;
+    }
   }
 
   &__advantage {
@@ -135,6 +149,10 @@ export default {
     position: absolute;
     top: 0;
     right: 0;
+
+    @media (max-width: 1070px) {
+      display: none;
+    }
   }
 }
 </style>

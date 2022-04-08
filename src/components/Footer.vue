@@ -55,8 +55,26 @@ export default {
 
 .footer {
   display: flex;
-  padding: 102px 0 91px 0;
-  border-top: 1px solid rgba(188, 208, 229, 0.496913);
+  padding-top: 102px;
+  padding-bottom: 91px;
+  position: relative;
+
+  @media (max-width: 900px) {
+    display: block;
+    padding-top: 55px;
+  }
+
+  &:before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 95%;
+    background-color: rgba(188, 208, 229, 0.496913);
+    position: absolute;
+  }
 
   input {
     background: $color-default-white;
@@ -70,6 +88,7 @@ export default {
     font-size: 16px;
     line-height: 28px;
     width: 100%;
+    max-width: 500px;
     margin-bottom: 30px;
 
 
@@ -81,10 +100,15 @@ export default {
 
   &__btn {
     font-weight: 700;
+    display: block;
   }
 
   &__logo {
     margin-right: auto;
+
+    @media (max-width: 900px) {
+      margin-bottom: 30px;
+    }
 
     &-img {
       display: flex;
@@ -104,6 +128,24 @@ export default {
     margin-right: 82px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: 900px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    @media (max-width: 400px) {
+      display: block;
+    }
+  }
+
+  &__nav {
+    width: calc(50% - 40px);
+
+    @media (max-width: 400px) {
+      width: auto;
+      margin-bottom: 20px;
+    }
   }
 
   &__reply {
