@@ -6,6 +6,7 @@
     <FeaturesList />
     <Hero />
     <Strategies />
+    <Footer />
   </div>
 </template>
 
@@ -16,10 +17,12 @@ import Tools from "@/components/Tools.vue";
 import FeaturesList from '@/components/FeaturesList.vue';
 import Hero from '@/components/Hero.vue';
 import Strategies from "@/components/Strategies";
+import Footer from "@/components/Footer";
 
 export default {
   name: 'App',
   components: {
+    Footer,
     Strategies,
     Tools,
     Intro,

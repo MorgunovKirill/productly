@@ -72,7 +72,7 @@ export default {
 @import "../assets/sass/vars";
 
 .strategies {
-  padding-bottom: 120px;
+  padding-bottom: 137px;
 
   &__title {
     font-family: $primary-font;
